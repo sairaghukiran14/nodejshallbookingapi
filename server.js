@@ -39,7 +39,9 @@ const allrooms = [
     ],
   },
 ];
-
+app.get("/", () => {
+  res.send("Welcome to hallapi server");
+});
 app.post("/createroom", function (req, res) {
   let newroom = {
     room_id: "R" + req.body.room_id,
